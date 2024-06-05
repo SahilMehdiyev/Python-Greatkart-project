@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     
     'category', #add
     'accounts', #add
-]
+    'store', #add
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
