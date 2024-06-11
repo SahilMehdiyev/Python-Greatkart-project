@@ -37,10 +37,10 @@
                 <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> 
                     <i class="fa fa-bars"></i> All category 
                 </button>
+
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="{% url 'store' %}">All Products </a>
-                    {% for category in all_categories %}
-                      <a class="dropdown-item" href="{% url 'products_by_category' category.slug %}">{{ category.category_name }} </a>
+                    {% for category in links %}
+                        <a class="dropdown-item" href="{{ category.get_url }}">{{ category.category_name }} </a>
                     {% endfor %}
                 </div>
             </div>  <!-- category-wrap.// -->
